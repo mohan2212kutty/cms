@@ -46,9 +46,9 @@ import {  Modal, ModalHeader, ModalBody } from 'reactstrap';
       });
     }
 
-    componentWillMount = () => {
+    componentDidMount = () => {
       this.bringEntries(this.props)
-      axios.get('http://localhost:5000/api/allcategories')
+      axios.get('http://localhost:5000/api/categories/${this.props.id}')
           .then((response) => {
                       this.setState({
                         categories: response.data
