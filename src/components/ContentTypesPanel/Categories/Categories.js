@@ -36,7 +36,7 @@ class Categories extends Component {
         console.log('Error: ', error);
       });
   };
-
+//NewHook
   static getDerivedStateFromProps = (nextProps, prevState) => {
     this.bringingCategoriesDb(nextProps)
   }

@@ -117,7 +117,8 @@ class LandingPage extends Component {
   generateTheme = {
     sections: [],
   }
-  componentWillMount(){
+  //NewHook
+  componentDidMount(){
     fetch('http://localhost:5000/api/appearance')
       .then(resp => resp.json())
       .then((data) => {
