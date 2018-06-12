@@ -15,8 +15,8 @@ class Allusers extends Component {
     this.onChange = this.onChange.bind(this);
     this.handleSubmit = this.handleSubmit.bind(this);
   }
-
-  componentWillMount = () => {
+//NewHook
+  componentDidMount = () => {
     const tokenStr = localStorage.getItem("token");
     console.log(tokenStr);
     axios

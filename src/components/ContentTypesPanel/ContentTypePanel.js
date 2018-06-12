@@ -56,8 +56,8 @@ class ContentTypePanel extends Component {
   componentDidMount = () => {
     this.bringEntries(this.props);
   };
-
-  componentWillReceiveProps = (nextProps, prevState) => {
+ //NewHook
+ static getDerivedStateFromProps = (nextProps, prevState) => {
     this.bringEntries(nextProps);
     axios
       .get(`http://localhost:5000/api/categories/${nextProps.id}`)
